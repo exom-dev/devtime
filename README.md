@@ -20,7 +20,7 @@ devtime favors UX over UI and tries not to get in the way of the user while stil
     - [Exporting to CSV/JSON](#exporting-to-csvjson)
   - [Settings](#settings)
     - [Database](#database)
-    - [Taskbar/Tray](#taskbar-tray)
+    - [Taskbar/Tray](#taskbartray)
     - [Hotkeys](#hotkeys)
     - [Advanced](#advanced)
   - [Terminal](#terminal)
