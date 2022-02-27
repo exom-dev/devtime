@@ -17,7 +17,7 @@ devtime favors UX over UI and tries not to get in the way of the user while stil
   - [Changing the logged time for a day](#changing-the-logged-time-for-a-day)
   - [Refreshing everything](#refreshing-everything)
   - [Stats](#stats)
-    - [Exporting to CSV/JSON](#exporting-to-csv-json)
+    - [Exporting to CSV/JSON](#exporting-to-csvjson)
   - [Settings](#settings)
     - [Database](#database)
     - [Taskbar/Tray](#taskbar-tray)
