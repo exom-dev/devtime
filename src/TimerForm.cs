@@ -1110,13 +1110,13 @@ namespace devtime
                 switch (timerState)
                 {
                     case TimerState.Start:
-                        if (Config.startHotkey != Config.Hotkey.None && key == (int)Config.startHotkey)
+                        if (Config.startHotkey != Config.Hotkey.None && key == (int)Config.startHotkey && StartButton.Enabled)
                         {
                             Start();
                         }
                         break;
                     case TimerState.Stop:
-                        if (Config.stopHotkey != Config.Hotkey.None && key == (int)Config.stopHotkey)
+                        if (Config.stopHotkey != Config.Hotkey.None && key == (int)Config.stopHotkey && StartButton.Enabled)
                         {
                             Stop();
                         }
