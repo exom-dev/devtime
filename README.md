@@ -190,6 +190,6 @@ devtime was created by [The Exom Developers](https://github.com/exom-dev). It is
 
 ## Dependencies and assets
 
-- [Fugue Icons](https://p.yusukekamiyamane.com/): [Yusuke Kamiyamane](https://yusukekamiyamane.com/) ([Creative Commons Attribution 3.0 License])
+- [Fugue Icons](https://p.yusukekamiyamane.com/): [Yusuke Kamiyamane](https://yusukekamiyamane.com/) ([Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/))
 - [SQLite 3](https://www.sqlite.org/): [SQLite developers](https://www.sqlite.org/crew.html) ([Public Domain](https://www.sqlite.org/copyright.html))
 - [SQLite Sharp](https://github.com/UnexomWid/sqlite-sharp): [UnexomWid](https://github.com/UnexomWid) ([MIT License](https://github.com/UnexomWid/sqlite-sharp/blob/master/LICENSE))
