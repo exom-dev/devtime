@@ -39,7 +39,7 @@ namespace devtime
         public static uint databaseExportBufferSize = 30;
 
         public static TaskbarColor stoppedTimerColor = TaskbarColor.None;
-        public static TaskbarColor runningTimerColor = TaskbarColor.None;
+        public static TaskbarColor runningTimerColor = TaskbarColor.Green;
 
         public static bool minimizeToTray = false;
 

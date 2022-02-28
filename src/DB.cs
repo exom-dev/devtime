@@ -69,7 +69,7 @@ namespace devtime
 
         public static List<string> GetTables()
         {
-            SQLite.Column[] result = Exec("SELECT name FROM sqlite_master WHERE type='table';");
+            SQLite.Column[] result = Exec("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name ASC;");
 
             if(result == null)
             {
