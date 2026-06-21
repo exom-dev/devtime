@@ -1,4 +1,4 @@
-# About <a href="https://docs.microsoft.com/en-us/dotnet/framework/whats-new/#v45"><img align="right" src="https://img.shields.io/badge/.Net%20Framework-4.5-5C2D91?logo=.net" alt=".Net Framework 4.5" /></a><a href="https://www.sqlite.org/"><img align="right" src="https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite" alt="SQLite 3" /></a>
+ # About <a href="https://docs.microsoft.com/en-us/dotnet/framework/whats-new/#v45"><img align="right" src="https://img.shields.io/badge/.Net%20Framework-4.5-5C2D91?logo=.net" alt=".Net Framework 4.8" /></a><a href="https://www.sqlite.org/"><img align="right" src="https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite" alt="SQLite 3" /></a>
 
 devtime is an application that helps you track how much time you spend working on your projects. It uses SQLite to store the logs for each day.
 
@@ -178,7 +178,7 @@ devtime includes an SQLite3 console. You can use it to run any queries on the da
 
 # Building devtime
 
-devtime was developed using Visual Studio 2022 and .Net Framework 4.5 for maximum compatibility.
+devtime was developed using Visual Studio 2026 and .Net Framework 4.8 for maximum compatibility.
 
 You will need an SQLite3 DLL present in the same folder as the `.sln` file. It will be automatically copied to the output folder. If it's not copied for some reason, manually copy it in the same folder as `devtime.exe`.
 
