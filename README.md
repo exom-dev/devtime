@@ -1,4 +1,4 @@
- # About <a href="https://docs.microsoft.com/en-us/dotnet/framework/whats-new/#v45"><img align="right" src="https://img.shields.io/badge/.Net%20Framework-4.5-5C2D91?logo=.net" alt=".Net Framework 4.8" /></a><a href="https://www.sqlite.org/"><img align="right" src="https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite" alt="SQLite 3" /></a>
+ # About <a href="https://docs.microsoft.com/en-us/dotnet/framework/whats-new/#v45"><img align="right" src="https://img.shields.io/badge/.Net%20Framework-4.8-5C2D91?logo=.net" alt=".Net Framework 4.8" /></a><a href="https://www.sqlite.org/"><img align="right" src="https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite" alt="SQLite 3" /></a>
 
 devtime is an application that helps you track how much time you spend working on your projects. It uses SQLite to store the logs for each day.
 
