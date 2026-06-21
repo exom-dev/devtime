@@ -91,7 +91,7 @@ namespace devtime
 
             hookProc = new HookProc(KeyHookProc);
 
-            if (!File.Exists(Config.configPath))
+            if (!File.Exists(Config.CONFIG_PATH))
             {
                 // Save defaults
                 Config.Save();
@@ -151,7 +151,7 @@ namespace devtime
 
             } while (failed);
 
-            ReloadContexts();
+            ReloadContexts(Config.lastSelectedContext);
             OnSettingsChanged();
 
             initialized = true;
@@ -361,7 +361,7 @@ namespace devtime
                     // This way, the clock continues smoothly and doesn't get confused by the hour change
                     LogTime(dayBaseTime + last.Ticks - dayCurrentStartTime);
 
-                    dayBaseTime = (dayBaseTime + last.Ticks - dayCurrentStartTime) * TimeSpan.TicksPerMillisecond;
+                    dayBaseTime = (dayBaseTime + last.Ticks - dayCurrentStartTime);// * TimeSpan.TicksPerMillisecond;
                     dayCurrentStartTime = current.Ticks;
 
                     checkpoint = current.Ticks;
@@ -618,7 +618,7 @@ namespace devtime
             int baseTime = DB.SelectLoggedTime(context, today);
 
             dayBaseTime = baseTime * TimeSpan.TicksPerMillisecond;
-            dayCurrentStartTime = DateTime.Now.Ticks;
+            dayCurrentStartTime = now.Ticks;
         }
 
         private void OnSelectEntry(string entry)
@@ -990,6 +990,8 @@ namespace devtime
                     ContextComboBox.SelectedIndex = ContextComboBox.Items.IndexOf(context);
                 }
             }
+
+            Config.lastSelectedContext = context;
         }
 
         void Error(string msg)
@@ -1129,6 +1131,8 @@ namespace devtime
 
         private void TimerForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Config.Save(); // Especially needed for lastSelectedContext
+
             if(timerState == TimerState.Stop)
             {
                 closing = true;

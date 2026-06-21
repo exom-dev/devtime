@@ -32,7 +32,7 @@ namespace devtime
             MediaPlayPause = Keys.MediaPlayPause
         }
 
-        public static string configPath = "devtime.ini";
+        public const string CONFIG_PATH = "devtime.ini";
 
         public static uint databaseUpdateFrequency = 300;
         public static string databasePath = "devtime.db";
@@ -49,9 +49,11 @@ namespace devtime
         public static bool disableDynamicGuiUpdates = true;
         public static bool freeMemoryWhenStopping = false;
 
+        public static string lastSelectedContext;
+
         public static void Save()
         {
-            using(StreamWriter writer = new StreamWriter(configPath))
+            using(StreamWriter writer = new StreamWriter(CONFIG_PATH))
             {
                 writer.WriteLine("DatabaseUpdateFrequency=" + databaseUpdateFrequency.ToString());
                 writer.WriteLine("DatabasePath=" + databasePath);
@@ -66,6 +68,11 @@ namespace devtime
 
                 writer.WriteLine("DisableDynamicGuiUpdates=" + disableDynamicGuiUpdates.ToString());
                 writer.WriteLine("FreeMemoryWhenStopping=" + freeMemoryWhenStopping.ToString());
+
+                if (!string.IsNullOrEmpty(lastSelectedContext))
+                {
+                    writer.WriteLine("LastSelectedProject=" + lastSelectedContext);
+                }
             }
         }
 
@@ -73,7 +80,7 @@ namespace devtime
         {
             try
             {
-                using (StreamReader reader = new StreamReader(configPath))
+                using (StreamReader reader = new StreamReader(CONFIG_PATH))
                 {
                     string line;
 
@@ -136,6 +143,9 @@ namespace devtime
                                     break;
                                 case "FreeMemoryWhenStopping":
                                     freeMemoryWhenStopping = bool.Parse(value);
+                                    break;
+                                case "LastSelectedProject":
+                                    lastSelectedContext = value;
                                     break;
                             }
                         }
